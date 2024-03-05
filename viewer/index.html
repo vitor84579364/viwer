@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets\style_css\style_viwer.css">
+
+  <title></title>
+</head>
+
+<body id="backgraund">
+    <div class="filme-viwer">
+        <iframe id = "url-filme">
+        </iframe>
+    </div>
+</body>
+</html>
+<script>
+  // Função para obter parâmetros da URL
+  function obterParametroUrl(nome) {
+        const urlSearchParams = new URLSearchParams(window.location.search);
+        return urlSearchParams.get(nome);
+    }
+  //alert(obterParametroUrl('url'))
+  var filme_ = document.querySelector("#url-filme")
+  filme_.src = obterParametroUrl('url')
+  
+</script>
